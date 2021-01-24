@@ -36,8 +36,8 @@
             this.ItemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrentCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OnOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtFile = new System.Windows.Forms.TextBox();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             this.btnImport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.ForeColor = System.Drawing.Color.White;
-            this.btnImport.Location = new System.Drawing.Point(85, 90);
+            this.btnImport.Location = new System.Drawing.Point(76, 90);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(162, 35);
             this.btnImport.TabIndex = 0;
@@ -60,7 +60,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Blue;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(65, 382);
+            this.btnSave.Location = new System.Drawing.Point(76, 595);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(133, 36);
             this.btnSave.TabIndex = 1;
@@ -74,7 +74,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(468, 379);
+            this.btnClose.Location = new System.Drawing.Point(967, 595);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(150, 39);
             this.btnClose.TabIndex = 2;
@@ -90,36 +90,34 @@
             this.ItemDescription,
             this.CurrentCount,
             this.OnOrder});
-            this.dgItems.Location = new System.Drawing.Point(65, 144);
+            this.dgItems.Location = new System.Drawing.Point(76, 143);
             this.dgItems.Name = "dgItems";
             this.dgItems.RowHeadersWidth = 51;
             this.dgItems.RowTemplate.Height = 24;
-            this.dgItems.Size = new System.Drawing.Size(553, 205);
+            this.dgItems.Size = new System.Drawing.Size(1041, 432);
             this.dgItems.TabIndex = 3;
             this.dgItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ItemCode
             // 
             this.ItemCode.DataPropertyName = "ItemCode";
-            this.ItemCode.HeaderText = "Item Code";
+            this.ItemCode.HeaderText = "Item No.";
             this.ItemCode.MinimumWidth = 6;
             this.ItemCode.Name = "ItemCode";
-            this.ItemCode.ReadOnly = true;
             this.ItemCode.Width = 125;
             // 
             // ItemDescription
             // 
             this.ItemDescription.DataPropertyName = "ItemDescription";
-            this.ItemDescription.HeaderText = "Item Description";
+            this.ItemDescription.HeaderText = "Description";
             this.ItemDescription.MinimumWidth = 6;
             this.ItemDescription.Name = "ItemDescription";
-            this.ItemDescription.ReadOnly = true;
             this.ItemDescription.Width = 125;
             // 
             // CurrentCount
             // 
             this.CurrentCount.DataPropertyName = "CurrentCount";
-            this.CurrentCount.HeaderText = "Current Count";
+            this.CurrentCount.HeaderText = "Count";
             this.CurrentCount.MinimumWidth = 6;
             this.CurrentCount.Name = "CurrentCount";
             this.CurrentCount.Width = 125;
@@ -127,18 +125,10 @@
             // OnOrder
             // 
             this.OnOrder.DataPropertyName = "OnOrder";
-            this.OnOrder.HeaderText = "On Order";
+            this.OnOrder.HeaderText = "Order";
             this.OnOrder.MinimumWidth = 6;
             this.OnOrder.Name = "OnOrder";
-            this.OnOrder.ReadOnly = true;
             this.OnOrder.Width = 125;
-            // 
-            // txtFile
-            // 
-            this.txtFile.Location = new System.Drawing.Point(253, 96);
-            this.txtFile.Name = "txtFile";
-            this.txtFile.Size = new System.Drawing.Size(365, 22);
-            this.txtFile.TabIndex = 4;
             // 
             // btnLogout
             // 
@@ -146,20 +136,33 @@
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(468, 45);
+            this.btnLogout.Location = new System.Drawing.Point(958, 90);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(150, 39);
             this.btnLogout.TabIndex = 5;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.textBox1.Location = new System.Drawing.Point(457, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(264, 55);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "Stock IT";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 504);
+            this.ClientSize = new System.Drawing.Size(1211, 695);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.txtFile);
             this.Controls.Add(this.dgItems);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
@@ -178,12 +181,12 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridView dgItems;
-        private System.Windows.Forms.TextBox txtFile;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn CurrentCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn OnOrder;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
